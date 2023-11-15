@@ -1,0 +1,70 @@
+---- Crashed! ----
+Date/Time: 2023/11/04 20:23:55.9955
+
+-- Crash --
+
+org.quiltmc.loader.impl.FormattedException: java.lang.VerifyError: Bad access to protected data in invokevirtual
+Exception Details:
+  Location:
+    net/minecraft/entity/mob/MobEntity.method_47922(Lnet/minecraft/entity/LivingEntity;)D @2: invokevirtual
+  Reason:
+    Type 'net/minecraft/entity/LivingEntity' (current frame, stack[1]) is not assignable to 'net/minecraft/entity/mob/MobEntity'
+  Current Frame:
+    bci: @2
+    flags: { }
+    locals: { 'net/minecraft/entity/mob/MobEntity', 'net/minecraft/entity/LivingEntity' }
+    stack: { 'net/minecraft/entity/mob/MobEntity', 'net/minecraft/entity/LivingEntity' }
+  Bytecode:
+    0000000: 2a2b b606 f6b6 06f9 2a2b b606 fab6 06f9
+    0000010: b806 fcaf                              
+
+	at org.quiltmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:526)
+	at org.quiltmc.loader.impl.launch.knot.Knot.launch(Knot.java:82)
+	at org.quiltmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:28)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+Caused by: java.lang.VerifyError: Bad access to protected data in invokevirtual
+Exception Details:
+  Location:
+    net/minecraft/entity/mob/MobEntity.method_47922(Lnet/minecraft/entity/LivingEntity;)D @2: invokevirtual
+  Reason:
+    Type 'net/minecraft/entity/LivingEntity' (current frame, stack[1]) is not assignable to 'net/minecraft/entity/mob/MobEntity'
+  Current Frame:
+    bci: @2
+    flags: { }
+    locals: { 'net/minecraft/entity/mob/MobEntity', 'net/minecraft/entity/LivingEntity' }
+    stack: { 'net/minecraft/entity/mob/MobEntity', 'net/minecraft/entity/LivingEntity' }
+  Bytecode:
+    0000000: 2a2b b606 f6b6 06f9 2a2b b606 fab6 06f9
+    0000010: b806 fcaf                              
+
+	at net.minecraft.entity.EntityType.<clinit>(EntityType.java:175)
+	at net.minecraft.item.Items.<clinit>(Items.java:797)
+	at net.minecraft.block.LightBlock.getOutlineShape(LightBlock.java:56)
+	at net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:1032)
+	at net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:1028)
+	at net.minecraft.block.AbstractBlock.getCollisionShape(AbstractBlock.java:349)
+	at net.minecraft.block.AbstractBlock$AbstractBlockState$ShapeCache.<init>(AbstractBlock.java:1293)
+	at net.minecraft.block.AbstractBlock$AbstractBlockState.initShapeCache(AbstractBlock.java:843)
+	at net.minecraft.block.Blocks.<clinit>(Blocks.java:1185)
+	at net.minecraft.block.FireBlock.registerDefaultFlammables(FireBlock.java:326)
+	at net.minecraft.Bootstrap.initialize(Bootstrap.java:54)
+	at net.minecraft.client.main.Main.main(Main.java:166)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.quiltmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:524)
+	... 3 more
+
+
+-- Mods --
+
+| Index | Mod                               | ID           | Version | Type    | File Hash (SHA-1)                        | File(s)                                                                                                                                    |
+|------:|-----------------------------------|--------------|---------|---------|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+|     2 | Java HotSpot(TM) 64-Bit Server VM | java         | 19      | Builtin |                                          | /Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home                                                                                 |
+|     1 | Minecraft                         | minecraft    | 1.20.1  | Builtin | de9190be218af4f189502579e6f03076be943877 | <game>/.cache/quilt_loader/remappedJars/minecraft-1.20.1-0.19.1/client-intermediary.jar                                                    |
+|     0 | Quilt Loader                      | quilt_loader | 0.19.1  | Quilt   | 17e415fb9457f2f99a8c7b5bc5ebde88db41b8d0 | <user>/.gradle/caches/modules-2/files-2.1/org.quiltmc/quilt-loader/0.19.1/17e415fb9457f2f99a8c7b5bc5ebde88db41b8d0/quilt-loader-0.19.1.jar |
+|------:|-----------------------------------|--------------|---------|---------|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+Mod Table Version: 2
+Plugin Types: {quilt_loader=[Quilt, Builtin]}
+
+
+---- end of report ----
