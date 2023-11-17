@@ -223,7 +223,7 @@ Plugin Types: {quilt_loader=[Quilt, Builtin]}
 [20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.recipe.ingredient.CustomIngredientInit for mod quilted_fabric_recipe_api_v1 (key main)
 [20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.recipe.ingredient.CustomIngredientSync for mod quilted_fabric_recipe_api_v1 (key main)
 [20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.recipe.ingredient.client.CustomIngredientSyncClient for mod quilted_fabric_recipe_api_v1 (key client)
-[20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer com.example.example_mod.ExampleMod for mod example_mod (key init)
+[20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer net.mythos.foundry.FoundryMod for mod example_mod (key init)
 [20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer org.quiltmc.qsl.tooltip.impl.client.QuiltClientTooltipMod::INSTANCE for mod quilt_tooltip (key client_events)
 [20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer org.quiltmc.qsl.tooltip.impl.client.QuiltClientTooltipMod::INSTANCE for mod quilt_tooltip (key client_init)
 [20:25:00] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer org.quiltmc.qsl.command.impl.client.ClientInitializer for mod quilt_command (key client_init)

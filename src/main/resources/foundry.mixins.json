@@ -1,11 +1,12 @@
 {
 	"required": true,
 	"minVersion": "0.8",
-	"package": "com.example.example_mod.mixin",
+	"package": "net.mythos.foundry.foundation.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [],
 	"client": [
-		"TitleScreenMixin"
+    "TitleScreenMixin",
+    "ItemRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

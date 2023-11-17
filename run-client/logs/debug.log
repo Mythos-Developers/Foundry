@@ -255,7 +255,7 @@ Plugin Types: {quilt_loader=[Quilt, Builtin]}
 [20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer org.quiltmc.qsl.worldgen.surface_rule.impl.SurfaceRuleDataInitializer for mod quilt_surface_rule (key init)
 [20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer org.quiltmc.qsl.tooltip.impl.client.QuiltClientTooltipMod::INSTANCE for mod quilt_tooltip (key client_events)
 [20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer org.quiltmc.qsl.tooltip.impl.client.QuiltClientTooltipMod::INSTANCE for mod quilt_tooltip (key client_init)
-[20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer com.example.example_mod.ExampleMod for mod example_mod (key init)
+[20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer net.mythos.foundry.FoundryMod for mod example_mod (key init)
 [20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer org.quiltmc.qsl.recipe.impl.RecipeManagerImpl for mod quilt_recipe (key events)
 [20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.qsl.item.v1.QuiltItemCompatMod for mod quilted_fabric_item_api_v1 (key init)
 [20:25:56] [main/DEBUG] (Quilt Loader/Entrypoint) Registering new-style initializer net.fabricmc.fabric.impl.lookup.ApiLookupImpl for mod quilted_fabric_api_lookup_api_v1 (key main)
