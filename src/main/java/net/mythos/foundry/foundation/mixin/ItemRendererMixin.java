@@ -21,26 +21,31 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class ItemRendererMixin {
 
 	@Unique
-	private static final ModelIdentifier SCYTHE_INVENTORY_MODEL = new ModelIdentifier(new Identifier(FoundryMod.ID, "scythe_gui"), "inventory");
+	private static final ModelIdentifier IRON_SCYTHE = new ModelIdentifier(FoundryMod.ID, "iron_scythe_gui", "inventory");
+	@Unique
+	private static final ModelIdentifier GOLDEN_SCYTHE = new ModelIdentifier(FoundryMod.ID, "golden_scythe_gui", "inventory");
+	@Unique
+	private static final ModelIdentifier DIAMOND_SCYTHE = new ModelIdentifier(FoundryMod.ID, "diamond_scythe_gui", "inventory");
+	@Unique
+	private static final ModelIdentifier NETHERITE_SCYTHE = new ModelIdentifier(FoundryMod.ID, "netherite_scythe_gui", "inventory");
 
 	@Shadow
 	private @Final ItemModels models;
 
 	@ModifyVariable(method = "renderItem", at = @At("HEAD"), argsOnly = true)
 	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
-		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
+		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND;
 
 		if (bl) {
 
-			if (stack.isOf(FoundryMod.SCYTHE)) {
+			if (stack.isOf(FoundryMod.GOLDEN_SCYTHE)) {
+				return models.getModelManager().getModel(GOLDEN_SCYTHE);
 
-				BakedModel inventoryModel = models.getModelManager().getModel(SCYTHE_INVENTORY_MODEL);
+			} else if (stack.isOf(FoundryMod.DIAMOND_SCYTHE)) {
+				return models.getModelManager().getModel(DIAMOND_SCYTHE);
 
-				if (inventoryModel != models.getModelManager().getMissingModel()) {
-
-					return inventoryModel;
-
-				}
+			} else if (stack.isOf(FoundryMod.NETHERITE_SCYTHE)) {
+				return models.getModelManager().getModel(NETHERITE_SCYTHE);
 
 			}
 

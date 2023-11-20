@@ -1,12 +1,12 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "foundry:item/netherite_scythe_gui",
-		"particle": "foundry:item/netherite_scythe_gui"
+		"0": "foundry:item/golden_scythe_gui",
+		"particle": "foundry:item/golden_scythe_gui"
 	},
   "elements": [
     {
-      "name": "netherite_scythe_gui_0",
+      "name": "golden_scythe_gui_0",
       "from": [7, 11, 0],
       "to": [14, 15, 1],
       "faces": {
@@ -19,7 +19,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_1",
+      "name": "golden_scythe_gui_1",
       "from": [4, 10, 0],
       "to": [7, 14, 1],
       "faces": {
@@ -32,7 +32,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_2",
+      "name": "golden_scythe_gui_2",
       "from": [14, 11, 0],
       "to": [15, 14, 1],
       "faces": {
@@ -45,7 +45,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_3",
+      "name": "golden_scythe_gui_3",
       "from": [2, 9, 0],
       "to": [4, 13, 1],
       "faces": {
@@ -58,7 +58,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_4",
+      "name": "golden_scythe_gui_4",
       "from": [1, 9, 0],
       "to": [2, 12, 1],
       "faces": {
@@ -71,7 +71,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_5",
+      "name": "golden_scythe_gui_5",
       "from": [7, 10, 0],
       "to": [8, 11, 1],
       "faces": {
@@ -84,7 +84,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_6",
+      "name": "golden_scythe_gui_6",
       "from": [10, 9, 0],
       "to": [13, 11, 1],
       "faces": {
@@ -97,7 +97,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_7",
+      "name": "golden_scythe_gui_7",
       "from": [13, 10, 0],
       "to": [14, 11, 1],
       "faces": {
@@ -110,7 +110,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_8",
+      "name": "golden_scythe_gui_8",
       "from": [9, 5, 0],
       "to": [10, 10, 1],
       "faces": {
@@ -123,7 +123,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_9",
+      "name": "golden_scythe_gui_9",
       "from": [8, 4, 0],
       "to": [9, 9, 1],
       "faces": {
@@ -136,7 +136,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_10",
+      "name": "golden_scythe_gui_10",
       "from": [10, 8, 0],
       "to": [12, 9, 1],
       "faces": {
@@ -149,7 +149,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_11",
+      "name": "golden_scythe_gui_11",
       "from": [10, 6, 0],
       "to": [11, 8, 1],
       "faces": {
@@ -162,7 +162,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_12",
+      "name": "golden_scythe_gui_12",
       "from": [7, 3, 0],
       "to": [8, 7, 1],
       "faces": {
@@ -175,7 +175,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_13",
+      "name": "golden_scythe_gui_13",
       "from": [6, 2, 0],
       "to": [7, 6, 1],
       "faces": {
@@ -188,7 +188,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_14",
+      "name": "golden_scythe_gui_14",
       "from": [5, 1, 0],
       "to": [6, 5, 1],
       "faces": {
@@ -201,7 +201,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_15",
+      "name": "golden_scythe_gui_15",
       "from": [4, 1, 0],
       "to": [5, 4, 1],
       "faces": {
@@ -214,7 +214,7 @@
       }
     },
     {
-      "name": "netherite_scythe_gui_16",
+      "name": "golden_scythe_gui_16",
       "from": [3, 1, 0],
       "to": [4, 3, 1],
       "faces": {
@@ -227,11 +227,12 @@
       }
     }
   ],
-	"gui_light": "front",
+  "gui_light": "front",
 	"display": {
 		"ground": {
-			"rotation": [90, 180, 0],
-			"translation": [0, 5.5, 0]
+			"rotation": [0, 0, 0],
+			"translation": [0, 0, 4],
+            "scale": [0.5, 0.5, 0.5]
 		},
 		"head": {
 			"rotation": [0, 180, 0],
@@ -244,7 +245,7 @@
 	},
   "groups": [
     {
-      "name": "netherite_scythe_gui",
+      "name": "golden_scythe_gui",
       "origin": [8, 8, 8],
       "color": 0,
       "children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
