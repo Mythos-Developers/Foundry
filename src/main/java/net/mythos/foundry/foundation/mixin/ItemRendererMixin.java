@@ -38,7 +38,10 @@ public class ItemRendererMixin {
 
 		if (bl) {
 
-			if (stack.isOf(FoundryMod.GOLDEN_SCYTHE)) {
+			if (stack.isOf(FoundryMod.IRON_SCYTHE)) {
+				return models.getModelManager().getModel(IRON_SCYTHE);
+
+			} if (stack.isOf(FoundryMod.GOLDEN_SCYTHE)) {
 				return models.getModelManager().getModel(GOLDEN_SCYTHE);
 
 			} else if (stack.isOf(FoundryMod.DIAMOND_SCYTHE)) {
