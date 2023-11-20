@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "foundry:item/iron_scythe_gui",
-		"particle": "foundry:item/iron_scythe_gui"
+		"0": "foundry:item/scythe/gui/iron_scythe_gui",
+		"particle": "foundry:item/scythe/gui/iron_scythe_gui"
 	},
   "elements": [
     {

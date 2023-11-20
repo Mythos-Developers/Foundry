@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "foundry:item/golden_scythe_gui",
-		"particle": "foundry:item/golden_scythe_gui"
+		"0": "foundry:item/scythe/gui/golden_scythe_gui",
+		"particle": "foundry:item/scythe/gui/golden_scythe_gui"
 	},
   "elements": [
     {

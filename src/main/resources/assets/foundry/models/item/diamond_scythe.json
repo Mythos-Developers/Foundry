@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
   "texture_size": [32, 32],
 	"textures": {
-		"0": "foundry:item/diamond_scythe",
-		"particle": "foundry:item/diamond_scythe"
+		"0": "foundry:item/scythe/diamond_scythe",
+		"particle": "foundry:item/scythe/diamond_scythe"
 	},
 	"elements": [
 		{
