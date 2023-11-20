@@ -15,7 +15,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "net.mythos.foundry.FoundryMod"
+			"init": "net.mythos.foundry.FoundryMod",
+			"client_init": "net.mythos.foundry.FoundryClient"
 		},
 		"depends": [
 			{

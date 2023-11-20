@@ -35,8 +35,11 @@ public class ItemRendererMixin {
 			if (stack.isOf(FoundryMod.SCYTHE)) {
 
 				BakedModel inventoryModel = models.getModelManager().getModel(SCYTHE_INVENTORY_MODEL);
+
 				if (inventoryModel != models.getModelManager().getMissingModel()) {
+
 					return inventoryModel;
+
 				}
 
 			}

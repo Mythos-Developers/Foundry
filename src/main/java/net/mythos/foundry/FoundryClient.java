@@ -11,7 +11,14 @@ public class FoundryClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient(ModContainer mod) {
 
-		ModelLoadingRegistry.INSTANCE.registerModelProvider((resources, out) -> out.accept(new ModelIdentifier(new Identifier(FoundryMod.ID, "scythe_gui"), "inventory")));
+		ModelLoadingRegistry.INSTANCE.registerModelProvider((resources, out) -> {
+
+			out.accept(new ModelIdentifier(new Identifier(FoundryMod.ID, "scythe_gui"), "inventory"));
+
+			// Logger here for debugging purposes
+			// FoundryMod.LOGGER.info("Resource list: {}", resources.getResource(new ModelIdentifier(FoundryMod.ID, "scythe_gui", "inventory")));
+
+		});
 
 	}
 
