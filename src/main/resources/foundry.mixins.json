@@ -5,8 +5,8 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [],
 	"client": [
-    "TitleScreenMixin",
-    "ItemRendererMixin"
+      "TitleScreenMixin",
+      "ItemRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
