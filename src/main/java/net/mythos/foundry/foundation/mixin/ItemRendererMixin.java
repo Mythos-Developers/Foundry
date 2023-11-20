@@ -1,6 +1,5 @@
 package net.mythos.foundry.foundation.mixin;
 
-import net.minecraft.client.model.Model;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.ItemModels;
@@ -8,15 +7,9 @@ import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.data.client.model.ModelIds;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
 import net.mythos.foundry.FoundryMod;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -28,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class ItemRendererMixin {
 
 	@Unique
-	private static final ModelIdentifier SCYTHE_INVENTORY_MODEL = new ModelIdentifier(FoundryMod.ID, "scythe_gui", "inventory");
+	private static final ModelIdentifier SCYTHE_INVENTORY_MODEL = new ModelIdentifier(new Identifier(FoundryMod.ID, "scythe_gui"), "inventory");
 
 	@Shadow
 	private @Final ItemModels models;
@@ -36,11 +29,20 @@ public class ItemRendererMixin {
 	@ModifyVariable(method = "renderItem", at = @At("HEAD"), argsOnly = true)
 	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
 		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
+
 		if (bl) {
+
 			if (stack.isOf(FoundryMod.SCYTHE)) {
-				return models.getModelManager().getModel(SCYTHE_INVENTORY_MODEL);
+
+				BakedModel inventoryModel = models.getModelManager().getModel(SCYTHE_INVENTORY_MODEL);
+				if (inventoryModel != models.getModelManager().getMissingModel()) {
+					return inventoryModel;
+				}
+
 			}
+
 		}
+
 		return model;
 	}
 
