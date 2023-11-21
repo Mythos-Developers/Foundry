@@ -19,12 +19,12 @@ public class FoundryMod implements ModInitializer {
 	public static final String NAME = "Foundry";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
-	public static Item WOODEN_SCYTHE = registerItem("wooden_scythe", new ScytheItem(ToolMaterials.WOOD, 5, -2.4F));
-	public static Item STONE_SCYTHE = registerItem("stone_scythe", new ScytheItem(ToolMaterials.STONE, 5, -2.4F));
-	public static Item IRON_SCYTHE = registerItem("iron_scythe", new ScytheItem(ToolMaterials.IRON, 5, -2.4F));
-	public static Item GOLDEN_SCYTHE = registerItem("golden_scythe", new ScytheItem(ToolMaterials.GOLD, 5, -2.4F));
-	public static Item DIAMOND_SCYTHE = registerItem("diamond_scythe", new ScytheItem(ToolMaterials.DIAMOND, 5, -2.4F));
-	public static Item NETHERITE_SCYTHE = registerItem("netherite_scythe", new ScytheItem(ToolMaterials.NETHERITE, 5, -2.4F));
+	public static Item WOODEN_SCYTHE = registerItem("wooden_scythe", new ScytheItem(ToolMaterials.WOOD, 7, -2.4F));
+	public static Item STONE_SCYTHE = registerItem("stone_scythe", new ScytheItem(ToolMaterials.STONE, 7, -2.4F));
+	public static Item IRON_SCYTHE = registerItem("iron_scythe", new ScytheItem(ToolMaterials.IRON, 7, -2.4F));
+	public static Item GOLDEN_SCYTHE = registerItem("golden_scythe", new ScytheItem(ToolMaterials.GOLD, 7, -2.4F));
+	public static Item DIAMOND_SCYTHE = registerItem("diamond_scythe", new ScytheItem(ToolMaterials.DIAMOND, 7, -2.4F));
+	public static Item NETHERITE_SCYTHE = registerItem("netherite_scythe", new ScytheItem(ToolMaterials.NETHERITE, 7, -2.4F));
 
 	@Override
 	public void onInitialize(ModContainer mod) {
