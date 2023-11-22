@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smithing",
+    "template": {
+        "item": "minecraft:netherite_upgrade_smithing_template"
+    },
+    "base": {
+        "item": "foundry:diamond_dagger"
+    },
+    "addition": {
+        "item": "minecraft:netherite_ingot"
+    },
+    "result": {
+        "item": "foundry:netherite_dagger",
+        "count": 1
+    }
+}

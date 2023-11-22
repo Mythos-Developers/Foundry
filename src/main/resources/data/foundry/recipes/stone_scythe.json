@@ -1,13 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "# /",
+    "##+",
+    "  /",
     " / "
   ],
   "key": {
     "#": {
       "tag": "minecraft:stone_tool_materials"
+    },
+    "+": {
+      "tag": "minecraft:stone_bricks"
     },
     "/": {
       "item": "minecraft:stick"

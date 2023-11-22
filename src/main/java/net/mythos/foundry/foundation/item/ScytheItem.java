@@ -16,13 +16,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
-public class ScytheItem extends ToolItem implements Vanishable {
+public class ScytheItem extends SwordItem implements Vanishable {
 
 	private final float attackDamage;
 	private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
 	public ScytheItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
-		super(toolMaterial, new QuiltItemSettings());
+		super(toolMaterial, attackDamage, attackSpeed, new QuiltItemSettings());
 		this.attackDamage = (float)attackDamage + toolMaterial.getAttackDamage();
 		ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
 		builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", (double)this.attackDamage, EntityAttributeModifier.Operation.ADDITION));
@@ -35,7 +35,7 @@ public class ScytheItem extends ToolItem implements Vanishable {
 	}
 
 	public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
-		return false;
+		return !miner.isCreative();
 	}
 
 	public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {

@@ -1,8 +1,17 @@
 {
 
+  "item.foundry.wooden_scythe": "Wooden Scythe",
+  "item.foundry.stone_scythe": "Stone Scythe",
   "item.foundry.iron_scythe": "Iron Scythe",
   "item.foundry.golden_scythe": "Golden Scythe",
   "item.foundry.diamond_scythe": "Diamond Scythe",
-  "item.foundry.netherite_scythe": "Netherite Scythe"
+  "item.foundry.netherite_scythe": "Netherite Scythe",
+
+  "item.foundry.wooden_dagger": "Wooden Dagger",
+  "item.foundry.stone_dagger": "Stone Dagger",
+  "item.foundry.iron_dagger": "Iron Dagger",
+  "item.foundry.golden_dagger": "Golden Dagger",
+  "item.foundry.diamond_dagger": "Diamond Dagger",
+  "item.foundry.netherite_dagger": "Netherite Dagger"
 
 }

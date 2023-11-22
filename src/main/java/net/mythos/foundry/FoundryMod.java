@@ -26,6 +26,13 @@ public class FoundryMod implements ModInitializer {
 	public static Item DIAMOND_SCYTHE = registerItem("diamond_scythe", new ScytheItem(ToolMaterials.DIAMOND, 7, -2.4F));
 	public static Item NETHERITE_SCYTHE = registerItem("netherite_scythe", new ScytheItem(ToolMaterials.NETHERITE, 7, -2.4F));
 
+	public static Item WOODEN_DAGGER = registerItem("wooden_dagger", new SwordItem(ToolMaterials.WOOD, 1, -1.9F, new QuiltItemSettings()));
+	public static Item STONE_DAGGER = registerItem("stone_dagger", new SwordItem(ToolMaterials.STONE, 1, -1.9F, new QuiltItemSettings()));
+	public static Item IRON_DAGGER = registerItem("iron_dagger", new SwordItem(ToolMaterials.IRON, 1, -1.9F, new QuiltItemSettings()));
+	public static Item GOLDEN_DAGGER = registerItem("golden_dagger", new SwordItem(ToolMaterials.GOLD, 1, -1.9F, new QuiltItemSettings()));
+	public static Item DIAMOND_DAGGER = registerItem("diamond_dagger", new SwordItem(ToolMaterials.DIAMOND, 1, -1.9F, new QuiltItemSettings()));
+	public static Item NETHERITE_DAGGER = registerItem("netherite_dagger", new SwordItem(ToolMaterials.NETHERITE, 1, -1.9F, new QuiltItemSettings()));
+
 	@Override
 	public void onInitialize(ModContainer mod) {
 

@@ -21,6 +21,10 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class ItemRendererMixin {
 
 	@Unique
+	private static final ModelIdentifier WOODEN_SCYTHE = new ModelIdentifier(FoundryMod.ID, "wooden_scythe_gui", "inventory");
+	@Unique
+	private static final ModelIdentifier STONE_SCYTHE = new ModelIdentifier(FoundryMod.ID, "stone_scythe_gui", "inventory");
+	@Unique
 	private static final ModelIdentifier IRON_SCYTHE = new ModelIdentifier(FoundryMod.ID, "iron_scythe_gui", "inventory");
 	@Unique
 	private static final ModelIdentifier GOLDEN_SCYTHE = new ModelIdentifier(FoundryMod.ID, "golden_scythe_gui", "inventory");
@@ -34,11 +38,17 @@ public class ItemRendererMixin {
 
 	@ModifyVariable(method = "renderItem", at = @At("HEAD"), argsOnly = true)
 	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
-		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND;
+		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
 
 		if (bl) {
 
-			if (stack.isOf(FoundryMod.IRON_SCYTHE)) {
+			if (stack.isOf(FoundryMod.WOODEN_SCYTHE)) {
+				return models.getModelManager().getModel(WOODEN_SCYTHE);
+
+			} else if (stack.isOf(FoundryMod.STONE_SCYTHE)) {
+				return models.getModelManager().getModel(STONE_SCYTHE);
+
+			} else if (stack.isOf(FoundryMod.IRON_SCYTHE)) {
 				return models.getModelManager().getModel(IRON_SCYTHE);
 
 			} if (stack.isOf(FoundryMod.GOLDEN_SCYTHE)) {
