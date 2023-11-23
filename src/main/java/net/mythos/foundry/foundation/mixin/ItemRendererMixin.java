@@ -1,5 +1,6 @@
 package net.mythos.foundry.foundation.mixin;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.ItemModels;
@@ -17,6 +18,9 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
+import java.util.Objects;
+import java.util.UUID;
+
 @Mixin(ItemRenderer.class)
 public class ItemRendererMixin {
 
@@ -33,12 +37,29 @@ public class ItemRendererMixin {
 	@Unique
 	private static final ModelIdentifier NETHERITE_SCYTHE = new ModelIdentifier(FoundryMod.ID, "netherite_scythe_gui", "inventory");
 
+	@Unique
+	private static final ModelIdentifier MERCURY_SCYTHE = new ModelIdentifier(FoundryMod.ID, "mercury_scythe_gui", "inventory");
+
 	@Shadow
 	private @Final ItemModels models;
+
+	@Shadow
+	private @Final MinecraftClient client;
 
 	@ModifyVariable(method = "renderItem", at = @At("HEAD"), argsOnly = true)
 	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
 		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
+
+		assert client.player != null;
+		if(client.player.getUuid().toString().equals("66b4c256-a175-4608-a16f-99cd8185fd07") && stack.isOf(FoundryMod.NETHERITE_SCYTHE)) {
+
+			if(bl) {
+				return models.getModelManager().getModel(MERCURY_SCYTHE);
+			}
+
+			return models.getModelManager().getModel(new ModelIdentifier(FoundryMod.ID, "mercury_scythe", "inventory"));
+
+		}
 
 		if (bl) {
 
@@ -58,6 +79,9 @@ public class ItemRendererMixin {
 				return models.getModelManager().getModel(DIAMOND_SCYTHE);
 
 			} else if (stack.isOf(FoundryMod.NETHERITE_SCYTHE)) {
+
+
+
 				return models.getModelManager().getModel(NETHERITE_SCYTHE);
 
 			}
