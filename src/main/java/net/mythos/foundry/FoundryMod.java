@@ -1,5 +1,6 @@
 package net.mythos.foundry;
 
+import net.bettercombat.BetterCombat;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterials;

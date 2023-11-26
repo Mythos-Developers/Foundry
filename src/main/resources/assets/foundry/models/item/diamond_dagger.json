@@ -190,14 +190,14 @@
 	],
 	"gui_light": "front",
 	"display": {
-		"thirdperson_righthand": {
-			"rotation": [-135, 0, 90],
-			"translation": [-7.5, -6.5, 2.25]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [-44, 0, 90],
-			"translation": [-7.5, -6.5, 2.25]
-		},
+      "thirdperson_righthand": {
+        "rotation": [135, 0, -90],
+        "translation": [7.5, 2.5, 2.25]
+      },
+      "thirdperson_lefthand": {
+        "rotation": [45, 0, -90],
+        "translation": [7.5, 2.5, 2.25]
+      },
 		"firstperson_righthand": {
 			"rotation": [-80, 180, 90],
 			"translation": [7.75, 2.25, 0],
