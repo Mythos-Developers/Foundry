@@ -1,0 +1,10 @@
+{
+  "values": [
+    "foundry:wooden_dagger",
+    "foundry:stone_dagger",
+    "foundry:iron_dagger",
+    "foundry:golden_dagger",
+    "foundry:diamond_dagger",
+    "foundry:netherite_dagger"
+  ]
+}
