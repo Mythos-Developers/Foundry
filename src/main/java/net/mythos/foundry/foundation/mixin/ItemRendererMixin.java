@@ -8,9 +8,11 @@ import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.command.argument.UuidArgumentType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.mythos.foundry.FoundryMod;
+import net.mythos.foundry.foundation.registry.RegisterItems;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -50,35 +52,35 @@ public class ItemRendererMixin {
 	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
 		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
 
-		assert client.player != null;
-		if(client.player.getUuid().toString().equals("66b4c256-a175-4608-a16f-99cd8185fd07") && stack.isOf(FoundryMod.NETHERITE_SCYTHE)) {
-
-			if(bl) {
-				return models.getModelManager().getModel(MERCURY_SCYTHE);
-			}
-
-			return models.getModelManager().getModel(new ModelIdentifier(FoundryMod.ID, "mercury_scythe", "inventory"));
-
-		}
+//		assert client.player != null;
+//		if(client.player.getUuid().equals(FoundryMod.UUID) && stack.isOf(RegisterItems.NETHERITE_SCYTHE)) {
+//
+//			if(bl) {
+//				return models.getModelManager().getModel(MERCURY_SCYTHE);
+//			}
+//
+//			return models.getModelManager().getModel(new ModelIdentifier(FoundryMod.ID, "mercury_scythe", "inventory"));
+//
+//		}
 
 		if (bl) {
 
-			if (stack.isOf(FoundryMod.WOODEN_SCYTHE)) {
+			if (stack.isOf(RegisterItems.WOODEN_SCYTHE)) {
 				return models.getModelManager().getModel(WOODEN_SCYTHE);
 
-			} else if (stack.isOf(FoundryMod.STONE_SCYTHE)) {
+			} else if (stack.isOf(RegisterItems.STONE_SCYTHE)) {
 				return models.getModelManager().getModel(STONE_SCYTHE);
 
-			} else if (stack.isOf(FoundryMod.IRON_SCYTHE)) {
+			} else if (stack.isOf(RegisterItems.IRON_SCYTHE)) {
 				return models.getModelManager().getModel(IRON_SCYTHE);
 
-			} if (stack.isOf(FoundryMod.GOLDEN_SCYTHE)) {
+			} if (stack.isOf(RegisterItems.GOLDEN_SCYTHE)) {
 				return models.getModelManager().getModel(GOLDEN_SCYTHE);
 
-			} else if (stack.isOf(FoundryMod.DIAMOND_SCYTHE)) {
+			} else if (stack.isOf(RegisterItems.DIAMOND_SCYTHE)) {
 				return models.getModelManager().getModel(DIAMOND_SCYTHE);
 
-			} else if (stack.isOf(FoundryMod.NETHERITE_SCYTHE)) {
+			} else if (stack.isOf(RegisterItems.NETHERITE_SCYTHE)) {
 
 
 
