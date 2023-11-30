@@ -24,8 +24,6 @@ public class FoundryMod implements ModInitializer {
 
 		LOGGER.info(getIdAsString(RegisterItems.WOODEN_SCYTHE));
 
-
-
 	}
 
 	public static String getIdAsString(Item item) {

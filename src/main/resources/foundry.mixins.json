@@ -9,7 +9,8 @@
       "EnchantingTableBlockMixin",
       "AnvilBlockMixin",
       "EnchantCommandMixin",
-      "PlayerEntityMixin"
+      "ItemStackArgumentMixin",
+      "ItemGroupsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

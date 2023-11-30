@@ -12,6 +12,8 @@
   "item.foundry.iron_dagger": "Iron Dagger",
   "item.foundry.golden_dagger": "Golden Dagger",
   "item.foundry.diamond_dagger": "Diamond Dagger",
-  "item.foundry.netherite_dagger": "Netherite Dagger"
+  "item.foundry.netherite_dagger": "Netherite Dagger",
+
+  "container.repair": "Forge & Reforge"
 
 }
