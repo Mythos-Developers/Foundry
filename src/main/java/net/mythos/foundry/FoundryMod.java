@@ -2,6 +2,8 @@ package net.mythos.foundry;
 
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.SimpleRegistry;
 import net.minecraft.util.Identifier;
 import net.mythos.foundry.foundation.registry.RegisterItems;
 import org.quiltmc.loader.api.ModContainer;
@@ -21,6 +23,8 @@ public class FoundryMod implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 
 		LOGGER.info(getIdAsString(RegisterItems.WOODEN_SCYTHE));
+
+
 
 	}
 
