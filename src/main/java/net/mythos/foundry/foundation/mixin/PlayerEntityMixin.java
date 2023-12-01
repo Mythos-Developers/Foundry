@@ -2,6 +2,7 @@ package net.mythos.foundry.foundation.mixin;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import org.quiltmc.qsl.worldgen.biome.api.BiomeModifications;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -26,7 +27,7 @@ public class PlayerEntityMixin {
 			}
 
 		}
-
+		
 	}
 
 }
