@@ -8,7 +8,7 @@
       "ItemRendererMixin",
       "EnchantingTableBlockMixin",
       "AnvilBlockMixin",
-      "EnchantCommandMixin",
+
       "ItemStackArgumentMixin",
       "ItemGroupsMixin"
 	],
