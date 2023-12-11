@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import net.mythos.foundry.foundation.registry.RegisterItems;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
+import org.quiltmc.qsl.networking.api.S2CPlayChannelEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +23,7 @@ public class FoundryMod implements ModInitializer {
 	@Override
 	public void onInitialize(ModContainer mod) {
 
-		LOGGER.info(getIdAsString(RegisterItems.WOODEN_SCYTHE));
+		RegisterItems.registerItems();
 
 	}
 

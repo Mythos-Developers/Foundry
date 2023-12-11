@@ -1,6 +1,7 @@
 package net.mythos.foundry;
 
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
+import net.minecraft.client.model.Model;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.util.Identifier;
 import org.quiltmc.loader.api.ModContainer;
@@ -20,8 +21,7 @@ public class FoundryClient implements ClientModInitializer {
 			out.accept(new ModelIdentifier(FoundryMod.ID, "diamond_scythe_gui", "inventory"));
 			out.accept(new ModelIdentifier(FoundryMod.ID, "netherite_scythe_gui", "inventory"));
 
-			out.accept(new ModelIdentifier(FoundryMod.ID, "mercury_scythe", "inventory"));
-			out.accept(new ModelIdentifier(FoundryMod.ID, "mercury_scythe_gui", "inventory"));
+			out.accept(new ModelIdentifier(FoundryMod.ID, "netherite_sickle_gui", "inventory"));
 
 		});
 

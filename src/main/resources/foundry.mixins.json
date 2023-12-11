@@ -5,12 +5,7 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [],
 	"client": [
-      "ItemRendererMixin",
-      "EnchantingTableBlockMixin",
-      "AnvilBlockMixin",
-
-      "ItemStackArgumentMixin",
-      "ItemGroupsMixin"
+      "ItemRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

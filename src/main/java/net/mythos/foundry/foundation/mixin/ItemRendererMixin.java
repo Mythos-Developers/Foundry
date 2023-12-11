@@ -1,6 +1,7 @@
 package net.mythos.foundry.foundation.mixin;
 
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.model.Model;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.ItemModels;
@@ -42,6 +43,10 @@ public class ItemRendererMixin {
 	@Unique
 	private static final ModelIdentifier MERCURY_SCYTHE = new ModelIdentifier(FoundryMod.ID, "mercury_scythe_gui", "inventory");
 
+
+	@Unique
+	private static final ModelIdentifier NETHERITE_SICKLE = new ModelIdentifier(FoundryMod.ID, "netherite_sickle_gui", "inventory");
+
 	@Shadow
 	private @Final ItemModels models;
 
@@ -51,17 +56,6 @@ public class ItemRendererMixin {
 	@ModifyVariable(method = "renderItem", at = @At("HEAD"), argsOnly = true)
 	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
 		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
-
-//		assert client.player != null;
-//		if(client.player.getUuid().equals(FoundryMod.UUID) && stack.isOf(RegisterItems.NETHERITE_SCYTHE)) {
-//
-//			if(bl) {
-//				return models.getModelManager().getModel(MERCURY_SCYTHE);
-//			}
-//
-//			return models.getModelManager().getModel(new ModelIdentifier(FoundryMod.ID, "mercury_scythe", "inventory"));
-//
-//		}
 
 		if (bl) {
 
@@ -74,17 +68,17 @@ public class ItemRendererMixin {
 			} else if (stack.isOf(RegisterItems.IRON_SCYTHE)) {
 				return models.getModelManager().getModel(IRON_SCYTHE);
 
-			} if (stack.isOf(RegisterItems.GOLDEN_SCYTHE)) {
+			} else if (stack.isOf(RegisterItems.GOLDEN_SCYTHE)) {
 				return models.getModelManager().getModel(GOLDEN_SCYTHE);
 
 			} else if (stack.isOf(RegisterItems.DIAMOND_SCYTHE)) {
 				return models.getModelManager().getModel(DIAMOND_SCYTHE);
 
 			} else if (stack.isOf(RegisterItems.NETHERITE_SCYTHE)) {
-
-
-
 				return models.getModelManager().getModel(NETHERITE_SCYTHE);
+
+			} else if (stack.isOf(RegisterItems.NETHERITE_SICKLE)) {
+				return models.getModelManager().getModel(NETHERITE_SICKLE);
 
 			}
 
