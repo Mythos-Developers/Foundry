@@ -11,7 +11,7 @@
 				"ScienceMind11": "Lead Developer",
 				"YBOUZL": "Artist"
 			},
-			"icon": "assets/foundry/icon.png"
+			"icon": "assets/foundry/logo.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
