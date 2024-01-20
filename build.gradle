@@ -14,30 +14,15 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
-	maven { url 'https://api.modrinth.com/maven' }
-
-	maven {
-		name "KosmX's maven"
-		url 'https://maven.kosmx.dev/'
-	}
-
-	maven { url "https://maven.shedaniel.me/" }
-	maven { url "https://maven.terraformersmc.com/releases/" }
-
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
 // See https://docs.gradle.org/current/userguide/platforms.html for information on how version catalogs work.
 dependencies {
+
 	minecraft libs.minecraft
 	mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
-	// Replace the above line with the block below if you want to use Mojang mappings as your primary mappings, falling back on QM for parameters and Javadocs
-	/*
-	mappings loom.layered {
-		mappings "org.quiltmc:quilt-mappings:${libs.versions.quilt.mappings.get()}:intermediary-v2"
-		officialMojangMappings()
-	}
-	*/
+
 	modImplementation libs.quilt.loader
 
 	// QSL is not a complete API; You will need Quilted Fabric API to fill in the gaps.
@@ -46,16 +31,6 @@ dependencies {
 	// modImplementation libs.bundles.quilted.fabric.api // If you wish to use Fabric API's deprecated modules, you can replace the above line with this one
 
 	// modImplementation 'net.mythos:myth-${project.myth_version}'
-
-	modImplementation "maven.modrinth:better-combat:1.8.3+1.20.1-fabric"
-
-	include modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim}")
-
-	modApi("me.shedaniel.cloth:cloth-config-fabric:11.1.106") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
-
-	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.2.1")))
 
 }
 

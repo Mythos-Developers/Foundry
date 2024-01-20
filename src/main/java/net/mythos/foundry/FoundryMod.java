@@ -22,6 +22,8 @@ public class FoundryMod implements ModInitializer {
 
 		RegisterItems.registerItems();
 
+
+
 	}
 
 	public static String getIdAsString(Item item) {
