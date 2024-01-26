@@ -8,6 +8,7 @@ import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import team.lodestar.lodestone.setup.LodestoneParticles;
 
 public class FoundryMod implements ModInitializer {
 
@@ -21,8 +22,6 @@ public class FoundryMod implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 
 		RegisterItems.registerItems();
-
-
 
 	}
 

@@ -7,6 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.mythos.foundry.FoundryMod;
+import net.mythos.foundry.foundation.item.BoltItem;
 import net.mythos.foundry.foundation.item.ScytheItem;
 import net.mythos.foundry.foundation.item.SickleItem;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
@@ -29,7 +30,11 @@ public class RegisterItems {
 
 	public static Item NETHERITE_SICKLE = new SickleItem(ToolMaterials.NETHERITE, 4, -1.8F);
 
+	public static Item BOLT = new BoltItem(new QuiltItemSettings());
+
 	public static void registerItems() {
+
+		registerItem("bolt", BOLT);
 
 		registerItem("wooden_scythe", WOODEN_SCYTHE);
 		registerItem("stone_scythe", STONE_SCYTHE);
