@@ -16,10 +16,7 @@ repositories {
 
 	maven {
 		name 'Ladysnake Mods'
-		url 'https://maven.ladysnake.org/releases'
-		content {
-			includeGroup 'team.lodestar.lodestone'
-		}
+		url 'https://ladysnake.jfrog.io/artifactory/mods'
 	}
 
 	maven {
@@ -47,10 +44,8 @@ dependencies {
 
 	// modImplementation include("com.github.Arathain:LodestoneLib-Quilt:1.19.3-SNAPSHOT")
 
-	modImplementation(libs.lodestoneLib) {
-		transitive = false
-	}
-	include(libs.lodestoneLib)
+	modImplementation "com.github.Arathain:LodestoneLib-Quilt:64238b9afc"
+	include "com.github.Arathain:LodestoneLib-Quilt:64238b9afc"
 
 	modImplementation(libs.midnightLib)
 	include(libs.midnightLib)
