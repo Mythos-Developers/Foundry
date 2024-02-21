@@ -1,17 +1,15 @@
 package net.mythos.foundry.foundation.mixin;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.model.Model;
-import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
+import net.minecraft.client.render.model.BakedModelManager;
+import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.command.argument.UuidArgumentType;
+import net.minecraft.data.client.model.Models;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Identifier;
 import net.mythos.foundry.FoundryMod;
 import net.mythos.foundry.foundation.registry.RegisterItems;
 import org.spongepowered.asm.mixin.Final;
@@ -20,9 +18,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
-import java.util.Objects;
-import java.util.UUID;
 
 @Mixin(ItemRenderer.class)
 public class ItemRendererMixin {
@@ -50,12 +45,9 @@ public class ItemRendererMixin {
 	@Shadow
 	private @Final ItemModels models;
 
-	@Shadow
-	private @Final MinecraftClient client;
-
 	@ModifyVariable(method = "renderItem", at = @At("HEAD"), argsOnly = true)
-	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
-		boolean bl = renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED;
+	private BakedModel foundry_guiModel(BakedModel model, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
+		boolean bl = renderMode == ModelTransformation.Mode.GUI || renderMode == ModelTransformation.Mode.GROUND || renderMode == ModelTransformation.Mode.FIXED;
 
 		if (bl) {
 

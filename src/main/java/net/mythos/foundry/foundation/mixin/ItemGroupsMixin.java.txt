@@ -3,14 +3,13 @@ package net.mythos.foundry.foundation.mixin;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.HolderLookup;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
 import java.util.Set;
 
-@Mixin(ItemGroups.class)
+@Mixin(ItemGroup.class)
 public class ItemGroupsMixin {
 
 

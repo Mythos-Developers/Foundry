@@ -1,5 +1,9 @@
 package net.mythos.foundry.foundation.item;
 
+import com.sammy.lodestone.handlers.ScreenshakeHandler;
+import com.sammy.lodestone.setup.LodestoneParticles;
+import com.sammy.lodestone.systems.rendering.particle.ParticleBuilders;
+import com.sammy.lodestone.systems.screenshake.ScreenshakeInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -8,11 +12,6 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import team.lodestar.lodestone.handlers.ScreenshakeHandler;
-import team.lodestar.lodestone.setup.LodestoneParticles;
-import team.lodestar.lodestone.systems.rendering.particle.WorldParticleBuilder;
-import team.lodestar.lodestone.systems.rendering.particle.data.ColorParticleData;
-import team.lodestar.lodestone.systems.screenshake.ScreenshakeInstance;
 
 import java.awt.*;
 import java.util.Random;
@@ -32,10 +31,9 @@ public class BoltItem extends Item {
 
 		ScreenshakeHandler.addScreenshake(new ScreenshakeInstance(40).setIntensity(20, 5));
 
-		WorldParticleBuilder
-			.create(LodestoneParticles.STAR_PARTICLE)
-			.setColorData(
-				ColorParticleData.create(Color.YELLOW, Color.ORANGE).build()
+		ParticleBuilders.create(LodestoneParticles.STAR_PARTICLE)
+			.setColor(
+				Color.YELLOW, Color.ORANGE
 			)
 			.addMotion(
 				rand.nextDouble(-.5, .5),

@@ -4,14 +4,18 @@ import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
-import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.Vanishable;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
@@ -42,7 +46,8 @@ public class ScytheItem extends SwordItem implements Vanishable {
 		if (state.isOf(Blocks.COBWEB)) {
 			return 15.0F;
 		} else {
-			return state.isIn(BlockTags.SWORD_EFFICIENT) ? 1.5F : 1.0F;
+			Material material = state.getMaterial();
+			return material != Material.PLANT && material != Material.REPLACEABLE_PLANT && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? 1.5F : 1.0F;
 		}
 	}
 

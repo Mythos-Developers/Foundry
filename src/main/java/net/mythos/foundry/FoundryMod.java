@@ -1,14 +1,13 @@
 package net.mythos.foundry;
 
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.mythos.foundry.foundation.registry.RegisterItems;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import team.lodestar.lodestone.setup.LodestoneParticles;
 
 public class FoundryMod implements ModInitializer {
 
@@ -26,7 +25,7 @@ public class FoundryMod implements ModInitializer {
 	}
 
 	public static String getIdAsString(Item item) {
-		return Registries.ITEM.getId(item).toString();
+		return Registry.ITEM.getId(item).toString();
 	}
 
 }
