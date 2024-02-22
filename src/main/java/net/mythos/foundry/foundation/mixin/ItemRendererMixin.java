@@ -36,7 +36,7 @@ public class ItemRendererMixin {
 	private static final ModelIdentifier NETHERITE_SCYTHE = new ModelIdentifier(FoundryMod.ID, "netherite_scythe_gui", "inventory");
 
 	@Unique
-	private static final ModelIdentifier MERCURY_SCYTHE = new ModelIdentifier(FoundryMod.ID, "mercury_scythe_gui", "inventory");
+	private static final ModelIdentifier AMALGAM_SCYTHE = new ModelIdentifier(FoundryMod.ID, "amalgam_scythe_gui", "inventory");
 
 
 	@Unique
@@ -68,6 +68,9 @@ public class ItemRendererMixin {
 
 			} else if (stack.isOf(RegisterItems.NETHERITE_SCYTHE)) {
 				return models.getModelManager().getModel(NETHERITE_SCYTHE);
+
+			} else if (stack.isOf(RegisterItems.AMALGAM_SCYTHE)) {
+				return models.getModelManager().getModel(AMALGAM_SCYTHE);
 
 			} else if (stack.isOf(RegisterItems.NETHERITE_SICKLE)) {
 				return models.getModelManager().getModel(NETHERITE_SICKLE);

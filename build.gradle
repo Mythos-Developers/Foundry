@@ -44,11 +44,9 @@ dependencies {
 	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modImplementation libs.quilted.fabric.api
 
-	modImplementation libs.lodestone.lib
-	include libs.lodestone.lib
+// 	include modImplementation ('com.github.Arathain:LodestoneLib-Quilt:v0.0.4-1.19.2')
 
-	modImplementation libs.midnight.lib
-	include libs.midnight.lib
+	include modImplementation ('maven.modrinth:midnightlib:0.5.2')
 
 }
 

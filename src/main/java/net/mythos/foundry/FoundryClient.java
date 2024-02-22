@@ -21,6 +21,8 @@ public class FoundryClient implements ClientModInitializer {
 			out.accept(new ModelIdentifier(FoundryMod.ID, "diamond_scythe_gui", "inventory"));
 			out.accept(new ModelIdentifier(FoundryMod.ID, "netherite_scythe_gui", "inventory"));
 
+
+
 			out.accept(new ModelIdentifier(FoundryMod.ID, "netherite_sickle_gui", "inventory"));
 
 		});
